@@ -1,0 +1,11 @@
+# 2 BIT MULTIPLEXER
+
+inputNames {S, A, B}
+outputNames {D}
+
+circuit NOT inv {S}
+circuit AND and1 {A, S}
+circuit AND and2 {B, inv}
+circuit OR or {and1, and2}
+
+outputs {or}

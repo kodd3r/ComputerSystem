@@ -1,0 +1,11 @@
+# half adder
+# S = A^B
+# Cout = A&B
+
+inputNames {A, B}
+outputNames {Cout, S}
+
+circuit XOR S {A, B}
+circuit AND Cout {A, B}
+
+output {Cout, S}

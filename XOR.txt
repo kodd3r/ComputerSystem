@@ -1,0 +1,11 @@
+# XOR from NAND
+
+inputNames {A, B}
+outputNames {C}
+
+circuit NAND ~(A&B) {A, B}
+circuit NAND ~(~(A&B)&A) {~(A&B), A}
+circuit NAND ~(~(A&B)&B) {~(A&B), B}
+circuit NAND XOR {~(~(A&B)&A),~(~(A&B)&B)}
+
+outputs {XOR}

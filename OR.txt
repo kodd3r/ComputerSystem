@@ -1,0 +1,10 @@
+# NOT using NAND
+
+inputNames {A, B}
+outputNames {C}
+
+circuit NAND ~A {A, A}
+circuit NAND ~B {B, B}
+circuit NAND OR {~A, ~B}
+
+outputs {OR}

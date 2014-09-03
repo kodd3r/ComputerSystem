@@ -1,0 +1,25 @@
+# FULL ADDER
+
+inputNames {A, B, Cin} 
+outputNames {Cout, Sum}
+
+circuit AND and1 {B, Cin}
+circuit AND and2 {A, Cin}
+circuit AND and3 {A, B}
+circuit OR cout1 {and1, and2}
+circuit OR cout2 {cout1, and3}
+
+circuit NOT ~A {A}
+circuit NOT ~B {B}
+circuit NOT ~Cin {Cin}
+circuit AND3 prod1 {A, ~B, ~Cin}
+circuit AND3 prod2 {~A, B, ~Cin}
+circuit AND3 prod3 {~A, ~B, Cin}
+circuit AND3 prod4 {A, B, Cin}
+circuit OR sum1 {prod1, prod2}
+circuit OR sum2 {prod3, prod4}
+circuit OR sum3 {sum1, sum2}
+
+outputs {cout2, sum3}
+
+

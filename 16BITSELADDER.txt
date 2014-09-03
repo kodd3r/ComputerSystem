@@ -1,0 +1,29 @@
+# 16 BIT FULL ADDER
+
+inputNames {A[15:0], B[15:0], Cin}
+outputNames {Cout, s[15:0]}
+
+circuit 16BITADDER ad0 {A[15:0], B[15:0], 0}
+circuit 16BITADDER ad1 {A[15:0], B[15:0], 1}
+circuit 2MUX s0 {Cin, ad0.Sum[0], ad1.Sum[0]}
+circuit 2MUX s1 {s0.D, ad0[1].Sum, ad1[1].Sum}
+circuit 2MUX s2 {s1.D, ad0[2].Sum, ad1[2].Sum}
+circuit 2MUX s3 {s2.D, ad0[3].Sum, ad1[3].Sum}
+circuit 2MUX s4 {s3.D, ad0[4].Sum, ad1[4].Sum}
+circuit 2MUX s5 {s4.D, ad0[5].Sum, ad1[5].Sum}
+circuit 2MUX s6 {s5.D, ad0[6].Sum, ad1[6].Sum}
+circuit 2MUX s7 {s6.D, ad0[7].Sum, ad1[7].Sum}
+circuit 2MUX s8 {s7.D, ad0[8].Sum, ad1[8].Sum}
+circuit 2MUX s9 {s8.D, ad0[9].Sum, ad1[9].Sum}
+circuit 2MUX s10 {s9.D, ad0[10].Sum, ad1[10].Sum}
+circuit 2MUX s11 {s10.D, ad0[11].Sum, ad1[11].Sum}
+circuit 2MUX s12 {s11.D, ad0[12].Sum, ad1[12].Sum}
+circuit 2MUX s13 {s12.D, ad0[13].Sum, ad1[13].Sum}
+circuit 2MUX s14 {s13.D, ad0[14].Sum, ad1[14].Sum}
+circuit 2MUX s15 {s14.D, ad0[15].Sum, ad1[15].Sum}
+circuit 2MUX cout {s15.D, ad0[15].Cout, ad1[15].Cout}
+
+outputs {cout , s[15:0].D}
+
+
+ 

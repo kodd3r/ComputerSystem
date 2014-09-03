@@ -1,0 +1,18 @@
+# 8 BIT FULL ADDER
+
+inputNames {A[7:0], B[7:0], Cin}
+outputNames {Cout, S[7:0]}
+
+circuit FULLADDER ad0 {A0, B0, Cin}
+circuit FULLADDER ad1 {A1, B1, ad0.Cout}
+circuit FULLADDER ad2 {A2, B2, ad1.Cout}
+circuit FULLADDER ad3 {A3, B3, ad2.Cout}
+circuit FULLADDER ad4 {A4, B4, ad3.Cout}
+circuit FULLADDER ad5 {A5, B5, ad4.Cout}
+circuit FULLADDER ad6 {A6, B6, ad5.Cout}
+circuit FULLADDER ad7 { A7, B7, ad6.Cout }
+
+outputs { ad7.Cout , ad[7:0].Sum }
+
+
+ 

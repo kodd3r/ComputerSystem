@@ -1,0 +1,8 @@
+# XOR from Half Adder
+
+inputNames {A, B}
+outputNames {C}
+
+circuit HALFADDER ha {A, B}
+
+outputs {ha.s}

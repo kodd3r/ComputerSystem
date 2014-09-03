@@ -1,0 +1,8 @@
+# NOT gate from NAND
+
+inputNames {A}
+outputNames {B}
+
+circuit NAND ~A {A, A}
+
+outputs {~A}

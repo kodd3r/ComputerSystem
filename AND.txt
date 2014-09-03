@@ -1,0 +1,9 @@
+# AND made from 2 NAND gates
+
+inputNames {A, B}
+outputNames {C}
+
+circuit NAND ~(A&B) {A, B}
+circuit NAND (A&B) {~(A&B), ~(A&B)}
+
+outputs { (A&B) }

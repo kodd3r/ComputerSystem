@@ -1,0 +1,14 @@
+# MAJORITY (A, B, C)
+# (A & B) | (B & C) | (A & C)
+
+inputNames {A, B, C}
+outputNames {D}
+
+circuit AND A&B {A, B}
+circuit AND B&C {B, C}
+circuit AND A&C {A, C}
+
+circuit OR or1 {A&B, B&C}
+circuit OR or2 {or1, A&C}
+
+outputs {or2}

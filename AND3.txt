@@ -1,0 +1,17 @@
+# NAND gate: D = (A & B & C)
+
+inputNames {A, B, C}
+outputNames {D}
+
+truthTable {
+0 0 0, 0
+0 0 1, 0
+0 1 0, 0
+1 0 0, 0
+1 0 1, 0
+0 1 1, 0
+1 1 0, 0
+1 1 1, 1
+}
+
+propagationDelay { 1 }

@@ -1,0 +1,11 @@
+# NOR from NAND
+
+inputNames {A, B}
+outputNames {C}
+
+circuit NAND ~A {A, A}
+circuit NAND ~B {B, B}
+circuit NAND ~(~A&~B) {~A, ~B}
+circuit NAND ~(A+B) {~(~A&~B), ~(~A&~B)}
+
+outputs {~(A+B)}

@@ -1,0 +1,5 @@
+# Test cases for Half Adder (a,b) -> (sum,co)
+testCase { 00, 00 }
+testCase { 01, 10 }
+testCase { 10, 10 }
+testCase { 11, 01 }
